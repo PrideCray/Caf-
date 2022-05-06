@@ -1,0 +1,45 @@
+body
+{
+    font-family: Verdana;
+    font-size: 147%;
+    margin-top: 0px;
+    margin-right: 500px;
+    margin-left: 500px;
+    background-color: rgb(38, 35, 35);
+}
+
+h1
+{
+    text-align: center;
+    color: white;
+} 
+
+td
+{
+    color: white; 
+}
+
+.comen
+{
+    resize: none;
+}
+
+input
+{
+    border: 3px solid #555;
+}
+
+textarea
+{
+    border: 3px solid #555;
+}
+
+input [type=email]
+{
+    width: 10000px;
+}
+
+#meio
+{
+    text-align: center;
+}
