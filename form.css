@@ -1,7 +1,7 @@
 body
 {
     font-family: Verdana;
-    font-size: 147%;
+    font-size: 150%;
     margin-top: 0px;
     margin-right: 500px;
     margin-left: 500px;
@@ -39,7 +39,7 @@ input [type=email]
     width: 10000px;
 }
 
-#meio
+.meio
 {
     text-align: center;
 }
