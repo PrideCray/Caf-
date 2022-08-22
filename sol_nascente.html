@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>solnascente</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" type="text/css" href="nascente.css">
+
+        <script language="JavaScript">
+            function troca(x)
+            {
+				var resposta = document.getElementById(x);
+				//x="Resp1" ou x="Resp2" ou "Resp3"...
+				
+				/*abaixo é testada SE O VALOR ATUAL DA CLASSE DA RESPOSTA 
+				NÃO É "exibida". 
+				
+				SE NÃO FOR, a classe está com o valor "escondida" e, 
+				portanto, deverá ser substituida pelo valor "exibida" 
+				(para aparecer na tela). 
+				SENÃO, ou seja, a classe da resposta está com valor "exibida", 
+				deverá ser substituída pelo valor "escondida" (para desaparecer
+				da tela).
+				*/ 
+				
+				
+				if (resposta.className.indexOf("exibida") == -1) 
+					/*troca-se o valor da "class" de "escondida" para "exibida"*/ 
+					resposta.className = resposta.className.replace("escondida","exibida");
+				else
+				    /*troca-se o valor da "class" de "exibida" para "escondida"*/ 
+					resposta.className = resposta.className.replace("exibida","escondida");
+			
+                if (document.getElementById("card").innerText=="Cardápio -")
+               
+                document.getElementById("card").innerText="Cardápio +";
+                           
+               
+               
+                else
+               
+                document.getElementById("card").innerText="Cardápio -";
+              
+            }
+        </script>
+    </head>
+    <body>
+        <header class="menu">
+            <nav>
+                <a class="logo">
+                    <img src="img/sol.png" alt="">
+                </a>
+
+                <div class="mobile-menu">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+                <ul class="nav-list" class="active">
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#sobre">Sobre</a>
+                    </li>
+
+                    <li class="menu-dropdown">
+                        <a href="#cardápio" onClick="troca('menu-dropdown')" id="card">Cardápio +</a>    
+                        <ul id="menu-dropdown" class="escondida">
+                            <li>
+                                <a href="#cafes">Café</a>
+                            </li>
+
+                            <li class="refeições">
+                                <a href="#comidas">Outras refeições</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#imagens">Imagens</a>
+                    </li>
+                    
+                    <section class="redes">
+                        <a href="https://www.instagram.com/solnascentecoffe/" target="_blank" class="insta">
+                            <img src="img/instagram_logo.webp" alt="Instagram">
+                        </a>
+
+                        <a href="https://www.facebook.com/solnascentecoffe" target="_blank" class="face">
+                            <img src="img/facebook_logo.webp" alt="Facebook">
+                        </a>
+                    </section>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main" id="home">
+            <section class="conteudo">
+                <h2 class="txt"><p>BEM VINDO(A) AO SOL NASCENTE</p></h2> 
+                <br>
+                <p>
+                    Seja bem vindo(a) ao nosso site! Esperamos que se sinta em casa, caro amante de café. <br>
+                    Venha visitar nossa cafeteria, temos uma variedade de cafés, comidas e bebidas para fazer
+                    seu dia ser melhor da malhor maneira. <br>
+                    <br>
+                </p>
+
+                <div class="texto">
+                    <div class="café_img">
+                        <img src="img/Flyer.png" alt="café_imagem">
+                    </div>
+                    
+                    <div class="sobre">
+                        <section id="sobre">
+                            <p>
+                                Sol Nascente é uma cafeteria localizada na Rua Guaipá - Vila Leopoldina, zona norte de São Paulo. 
+                                Aqui servimos diversos tipos de café e afins, com garçons sempre a disposição. Entre nossos 
+                                conceitos centrais está a inclusividade. Uma experiência para todos, numa cafeteria que acolhe os 
+                                mais diferentes paladares, níveis sociais e culturais. O reconhecimento do trabalho veio de diferentes 
+                                direções. Ocupa o 33º lugar na lista das melhores cafeterias da América Latina pela revista britânica 
+                                Restaurant (2020).
+                            </p>
+                        </section>
+                    </div>
+                </div>
+            </section>
+
+            <div class="fundo">
+                <section class="linha">
+                    <h1 class="title">Cardápio</h1>
+                    <h3 class="cor"><p>Cafés</p></h3>
+                
+                    <div class="questions-container" id="cafes">
+                        <div class="question">
+                            <button>
+                                <span>Cappuccino</span>
+                            </button>
+                            <p>O cappuccino é uma deliciosa invenção italiana, que mistura o café espresso com leite 
+                                vaporizado, resultando em um creme bem consistente.
+                            </p>
+                        </div>
+                
+                        <div class="question">
+                            <button>
+                                <span>Latte</span>
+                            </button>
+                            <p>O Latte é uma combinação do café expresso com uma quantidade generosa de leite ou sua espuma no 
+                                topo do copo. No Brasil, principalmente em padarias e bares, é conhecido como o famoso pingado.
+                            </p>
+                        </div>
+                
+                        <div class="question">
+                            <button>
+                                <span>Espresso</span>
+                            </button>
+                            <p>O espresso, receita tradicional, é o café puro e feito sob pressão, sem adição de leite ou qualquer
+                                outro ingrediente. Quando bem feito, ele apresenta duas camadas: a bebida e seu creme (espuma).
+                            </p>
+                        </div>
+                
+                        <div class="question">
+                            <button>
+                                <span>Macchiato</span>
+                            </button>
+                            <p>O macchiato é uma versão adocicada do espresso com uma “macchia di latte” (mancha de leite) 
+                                vaporizada, que traz cremosidade e valoriza os açúcares da bebida.
+                            </p>
+                        </div>
+
+                        <div class="question">
+                            <button>
+                                <span>Café duplo</span>
+                            </button>
+                            <p>Essa variedade da bebida nada mais é do que aquilo que o nome diz: duas medidas do café espresso 
+                                servidas na mesma xícara.
+                            </p>
+                        </div>
+
+                        <div class="question">
+                            <button>
+                                <span>Café mocha</span>
+                            </button>
+                            <p>O mocha ou mocaccino é para os fãs de chocolate, já que é feito com café espresso, leite vaporizado, 
+                                espuma de leite e calda de chocolate.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="linha"> 
+                    <h1 class="title">Outras refeições</h1>
+                    <h3 class="cor"><p>Comidas</p></h3>
+                
+                    <div class="questions-container" id="comidas">
+                        <div class="question">
+                            <button>
+                                <span>Tortas</span>
+                            </button>
+                            <p>A torta é um dos pratos mais tradicionais da cozinha brasileira, podendo ser servida como prato 
+                                principal ou lanche ao longo do dia. Sua versão mais famosa é a de Torta de Frango, mas existem 
+                                variações com diversos recheios, como carne, peixe e legumes.
+                            </p>
+                        </div>
+                
+                        <div class="question">
+                            <button>
+                                <span>Esfihas</span>
+                            </button>
+                            <p>Dentre as comidas de origem árabe, a esfiha (ou esfirra) é mais uma opção que caiu no gosto dos 
+                                brasileiros. Com preparo rápido e prático, este salgado possui origem na região do Líbano e combina, 
+                                tradicionalmente, um pão chato com cobertura de carne e cebola.
+                            </p>
+                        </div>
+
+                        <div class="question">
+                            <button>
+                                <span>Pudim</span>
+                            </button>
+                            <p>Um bom doce cai bem a qualquer hora do dia. No café da manhã, após o almoço ou no meio da tarde, 
+                                aquele quitute açucarado deixa a rotina mais leve e a vida mais feliz. 
+                            </p>
+                        </div>
+
+                        <div class="question">
+                            <button>
+                                <span>Bolo</span>
+                            </button>
+                            <p>Um bolinho fofinho é perfeito para acompanhar uma boa xícara de café. Aqui temos diversos tipos de 
+                                bolos para fazer seu dia melhor.
+                            </p>
+                        </div>
+
+                        <div class="question">
+                            <button>
+                                <span>Brownie</span>
+                            </button>
+                            <p>“Invenção” americana, o brownie é um bolinho de chocolate que há muito tempo caiu no gosto dos 
+                                brasileiros! Especialmente daqueles que são loucos por chocolate – ou ainda, chocólatras assumidos.
+                            </p>
+                        </div>
+
+                        <div class="question">
+                            <button>
+                                <span>Donuts</span>
+                            </button>
+                            <p>Os Donuts fazem um super sucesso nos Estados Unidos, e agora eles vem fazendo um super sucesso no 
+                                Brasil, sendo uma bo aopção para acompanhar seu café.
+                            </p>
+                        </div>
+
+                        <div class="question">
+                            <button>
+                                <span>Cookies</span>
+                            </button>
+                            <p>Os cookies são ótimos para adocicar qualquer momento, seja o seu café da manhã, da tarde ou aquela 
+                                hora que bate a vontade de doce. 
+                            </p>
+                        </div>
+                    </div>                    
+                    </ul>
+                    <ul class="slider" id="imagens">
+                        <li>
+                            <input type="radio" id="slide1" name="slide" checked>
+                            <label for="slide1"></label>
+                            <img src="https://images.unsplash.com/photo-1511018556340-d16986a1c194?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80">
+                        </li>
+                
+                        <li>
+                            <input type="radio" id="slide2" name="slide" checked>
+                            <label for="slide2"></label>
+                            <img src="https://images.unsplash.com/photo-1566897819059-db42e135fa69?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80">
+                        </li>
+                
+                        <li>
+                            <input type="radio" id="slide3" name="slide" checked>
+                            <label for="slide3"></label>
+                            <img src="https://images.unsplash.com/photo-1594261956806-3ad03785c9b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80">
+                        </li>
+
+                        <li>
+                            <input type="radio" id="slide4" name="slide" checked>
+                            <label for="slide4"></label>
+                            <img src="https://images.unsplash.com/photo-1462917882517-e150004895fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80">
+                        </li>
+
+                        <li>
+                            <input type="radio" id="slide5" name="slide" checked>
+                            <label for="slide5"></label>
+                            <img src="https://images.unsplash.com/photo-1564355808539-22fda35bed7e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1447&q=80">
+                        </li>
+
+                        <li>
+                            <input type="radio" id="slide6" name="slide" checked>
+                            <label for="slide6"></label>
+                            <img src="https://images.unsplash.com/photo-1586985290301-8db40143d525?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80">
+                        </li>
+
+                        <li>
+                            <input type="radio" id="slide7" name="slide" checked>
+                            <label for="slide7"></label>
+                            <img src="https://images.unsplash.com/photo-1464195085758-89f3e55e821e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80">
+                        </li>
+                </section>
+            </div>
+        </main>
+        <script src="mobile-navbar.js"></script>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <a href="https://api.whatsapp.com/send?phone=5511980848138&text=Quero%20fazer%20um%20pedido." class="float" target="_blank">
+            <i class="fa fa-whatsapp my-float"></i>
+        </a>
+    </body>
+</html>
